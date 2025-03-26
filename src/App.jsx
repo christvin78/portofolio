@@ -19,26 +19,34 @@ const App = () => {
             alt="Foto Profil"
           />
           <div className="bio">
-            <h2>About Me & skill</h2>
+            <h2>About Mel</h2>
             <p>
-            I am a student, I study at Tri Ratna and my skills are in HTML, React and Git.
+              I am a student, I study at Tri Ratna
+
+              <h2>Skill</h2>
+            <p>My skills are in Html, React and Git</p>
             </p>
+
+            <h2>History of education</h2>
+            <p>2016 July I was in 1st grade of elementary school
+and 2022 July I first entered junior high school at Permata Bunda school
+and 2024 I just entered vocational school at Tri Ratna school</p>
           </div>
         </div>
       </section>
 
       {/* Section Kontak */}
       <section className="contact-section">
-        <h2>Hubungi Saya</h2>
+        <h2>These are the projects I have worked on so far</h2>
         <p>Jika Anda ingin berbicara lebih lanjut, Anda bisa menghubungi saya melalui email:</p>
         <a href="mailto:email@example.com" className="contact-link">
-         s
+          Email
         </a>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-     <p>&copy; 2025 [Nama Anda]. Semua hak dilindungi.</p>
+        <p>&copy; {new Date().getFullYear()} Christvin Dylen</p>
       </footer>
     </div>
   );

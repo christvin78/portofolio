@@ -1,85 +1,92 @@
-/* App.css */
 .App {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-}
-
-header {
-  background-color: #007bff;
-  color: white;
-  padding: 40px 0;
+  font-family: sans-serif;
   text-align: center;
 }
 
-header h1 {
-  font-size: 3rem;
-  margin: 0;
+.header {
+  background-color: #4c04a3;
+  color: white;
+  padding: 20px 0;
 }
 
-.profession {
-  font-size: 1.5rem;
-  margin-top: 10px;
+.header h1 {
+  margin: 0;
+  border-bottom: 2px solid white; /* Tambahkan border bawah pada h1 header */
+  padding-bottom: 10px;
+}
+
+.header .profession {
+  margin-top: 5px;
+  font-style: italic;
 }
 
 .intro-section {
-  padding: 40px;
-  text-align: center;
+  padding: 40px 20px;
 }
 
 .intro-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .profile-photo {
-  border-radius: 50%;
   width: 200px;
   height: 200px;
+  border-radius: 50%;
   object-fit: cover;
   margin-bottom: 20px;
 }
 
 .bio {
+  text-align: left;
   max-width: 600px;
-  margin-top: 20px;
-  font-size: 1.1rem;
-  color: #555;
-  text-align: justify;
 }
 
 .bio h2 {
-  font-size: 2rem;
-  color: #333;
+  border: 5px solid #ddd; /* Tambahkan border bawah pada h2 bio */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .contact-section {
+  background-color: #f0f0f0;
   padding: 40px 20px;
-  text-align: center;
 }
 
 .contact-section h2 {
-  font-size: 2rem;
-  color: #333;
+  border-bottom: 1px solid #ddd; /* Tambahkan border bawah pada h2 contact */
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .contact-link {
   color: #007bff;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-footer {
-  text-align: center;
+.footer {
   background-color: #333;
   color: white;
   padding: 20px 0;
   margin-top: 40px;
+}
+
+/* Responsiveness untuk tampilan PC */
+@media (min-width: 768px) {
+  .intro-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+
+  .bio {
+    text-align: left;
+    max-width: 600px;
+  }
 }
