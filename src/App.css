@@ -1,92 +1,187 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+/* App.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
 .header {
-  background-color: #4c04a3;
-  color: white;
-  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh; /* Adjust based on screen size */
+  text-align: center;
+  padding: 20px;
 }
 
 .header h1 {
-  margin: 0;
-  border-bottom: 2px solid white; /* Tambahkan border bawah pada h1 header */
-  padding-bottom: 10px;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.header .profession {
-  margin-top: 5px;
-  font-style: italic;
+.profession {
+  font-size: 1.5rem;
+  color: #555;
 }
 
+/* Intro Section */
 .intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 40px 20px;
+  text-align: center;
 }
 
 .intro-content {
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
-  align-items: center;
+  max-width: 1200px;
+  padding: 20px;
 }
 
 .profile-photo {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  object-fit: cover;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 
 .bio {
-  text-align: left;
   max-width: 600px;
+  text-align: left;
 }
 
 .bio h2 {
-  border: 5px solid #ddd; /* Tambahkan border bawah pada h2 bio */
-  padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 1.8rem;
+  color: #333;
 }
 
+.bio p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Contact Section */
 .contact-section {
-  background-color: #f0f0f0;
+  width: 100%;
   padding: 40px 20px;
+  text-align: center;
 }
 
 .contact-section h2 {
-  border-bottom: 1px solid #ddd; /* Tambahkan border bawah pada h2 contact */
-  padding-bottom: 5px;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
 .contact-link {
+  font-size: 1.2rem;
   color: #007bff;
   text-decoration: none;
 }
 
-.footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  margin-top: 40px;
+.contact-link:hover {
+  text-decoration: underline;
 }
 
-/* Responsiveness untuk tampilan PC */
-@media (min-width: 768px) {
-  .intro-content {
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+/* Footer */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+  position: relative;
+  bottom: 0;
+}
+
+.footer p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header .profession {
+    font-size: 1.2rem;
+  }
+
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
   }
 
   .profile-photo {
-    margin-right: 40px;
-    margin-bottom: 0;
+    width: 120px;
+    height: 120px;
   }
 
   .bio {
-    text-align: left;
-    max-width: 600px;
+    text-align: center;
+  }
+
+  .contact-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header .profession {
+    font-size: 1rem;
+  }
+
+  .intro-content {
+    padding: 15px;
+  }
+
+  .bio h2 {
+    font-size: 1.5rem;
+  }
+
+  .bio p {
+    font-size: 0.9rem;
+  }
+
+  .contact-section p {
+    font-size: 0.9rem;
+  }
+
+  .footer p {
+    font-size: 0.8rem;
   }
 }
